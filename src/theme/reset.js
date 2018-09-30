@@ -75,6 +75,12 @@ const reset = `
 	  box-sizing: inherit;
 	}
 
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-text-size-adjust: 100%;
+	}
+
 	img,
 	object {
 	  max-width: 100%;
@@ -142,6 +148,35 @@ const reset = `
 	button::-moz-focus-inner {
 	  padding: 0;
 	  border: 0;
+	}
+	
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	a[href^="tel"][x-apple-data-detectors],
+	a[href^="mailto"][x-apple-data-detectors] {
+	  color: inherit !important;
+	  text-decoration: none !important;
+	  font-size: inherit !important;
+	  font-family: inherit !important;
+	  font-weight: inherit !important;
+	  line-height: inherit !important;
+	}
+
+	input {
+		font-family: inherit;
+
+		&[type="text"],
+		&[type="email"],
+		&[type="password"] {
+			width: 100%;
+		}
+
+		&:focus {
+			outline: 0;
+		}
 	}
 `;
 
