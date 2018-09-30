@@ -1,11 +1,12 @@
 import React from 'react';
 import {string} from 'prop-types';
 import {withSiteData} from 'react-static';
+import Layout from '../components/layout/layout';
 
-const Home = ({title}) => (
-	<div>
+const Home = ({title}) => console.log(title) || (
+	<Layout>
 		<h1>{title}</h1>
-	</div>
+	</Layout>
 );
 
 Home.propTypes = {

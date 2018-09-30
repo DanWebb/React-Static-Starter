@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '../components/layout/layout';
 
 const NotFound = () => (
-	<div>
+	<Layout>
 		<h1>404</h1>
-	</div>
+	</Layout>
 );
 
 export default NotFound;

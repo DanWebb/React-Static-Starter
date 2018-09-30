@@ -1,5 +1,4 @@
-import Document from './src/components/document/document';
-import renderToHtml from './src/modules/render-styles';
+import Document from './document';
 
 const getSiteData = () => ({title: 'React Static Starter'});
 
@@ -7,13 +6,15 @@ const getRoutes = () => [{
 	path: '/',
 	component: 'src/pages/home'
 }, {
-	is404: true,
+	path: '404',
 	component: 'src/pages/not-found'
 }];
 
 export default {
+	plugins: [
+		'react-static-plugin-styled-components'
+	],
 	getSiteData,
 	getRoutes,
-	renderToHtml,
 	Document
 };
